@@ -1,8 +1,8 @@
 ---
-name: Example in class
+name: Homework 8
 tools: [Python, HTML, vega-lite]
-image: assets/pngs/interactive_legend.png
-description: Ongoing example!
+image: assets/pngs/homework8cover.png
+description: Homework 8 submission
 custom_js:
   - vega.min
   - vega-lite.min
@@ -11,56 +11,28 @@ custom_js:
 ---
 
 
-# Example including vega-lite
+# Homework 8
 
-Example that came with the template:
+## Visualization #1
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/chart1_hw8.json" style="width: 100%"></vegachart>
 
-## From the vega-editor
+### Write Up
+INSERT THE WRITE UP HERE
 
-Simple barplot specification:
+## Visualization #2
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/firstViz_take2.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/chart2_hw8.json" style="width: 100%"></vegachart>
 
-Something more complex with interactivity:
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/interactive_legend.json" style="width: 100%"></vegachart>
-
-## From a dictionary in Altair in Python
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
-
-### Static side-by-side
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/static_mobility_dashboard.json" style="width: 100%"></vegachart>
-
-### Dashboard side-by-side with `from_dict` function
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/side_by_side_from_dict.json" style="width: 100%"></vegachart>
-
-## Quick aside into Altair-only plots
-
-This was a plot that was made purely in Altair:
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/pop_scatter.json" style="width: 100%"></vegachart>
-
-## Side-by-side, interactive using Altair syntax
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/side_by_side_mobility_url.json" style="width: 100%"></vegachart>
-
-## Side-by-side, interactive using Altair syntax, local data
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/side_by_side_with_localdata.json" style="width: 100%"></vegachart>
-
-
+### Write Up
+INSERT THE WRITE UP HERE
 
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
+{% include elements/button.html link="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/jgl4/mis/blob/main/Workbook.ipynb" text="The Analysis" %}
 </div>
