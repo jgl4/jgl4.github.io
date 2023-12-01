@@ -22,11 +22,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Final Project - Salmonella">
+  <meta property="og:title" content="Salmonella in the United States -- Cases, Rates, and Serotypes">
   <meta property="og:description" content="Submission for final project">
-  <meta property="og:image" content="assets/pngs/interactive_legend.png">
+  <meta property="og:image" content="assets/pngs/final_project_header.png">
 
-  <title>Final Project - Salmonella</title>
+  <title>Salmonella in the United States -- Cases, Rates, and Serotypes</title>
   <meta name="description" content="Submission for final project">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -79,29 +79,65 @@
 
 <h2 id="disease-in-the-united-states">Disease in the United States</h2>
 
+<p>The Centers of Disease and Prevention selected a total of 16 nationally notifiable diseases, not including sexually transmitted diseases, to collect information on from 1950 to 2019. Since 1980, Salmonellosis has had the most new cases per 100,000 population peaking at 27.37 cases per 100,000 population in 1985. In the most recent year of data collected (2019), there were 58,371 new cases of Salmonellosis in the United States revealing the evident impact of this bacterial disease in the present day. The line chart below highlights Salmonellosis history as the leading disease with new cases in the United States. Salmonellosis is the only disease to diverge from the blue-purple color palette in order to spotlight the subject of this project.</p>
+
 <vegachart schema-url="/assets/json/disease_chart.json" style="width: 100%"></vegachart>
+<p>Source: <a href="https://www.cdc.gov/nchs/data/hus/2020-2021/IDNotif.pdf">Centers For Disease Control and Prevention</a></p>
+
+<p><strong><u>Note</u></strong>: I created the contextual visualization seen above using the source data. The code used to create the visualization is linked through “The Analysis” button at the bottom of this page.</p>
 
 <h2 id="salmonella-rates">Salmonella Rates</h2>
 
+<p>In an effort to prevent new cases of Salmonella in the United States, it is valuable to understand which states have the highest Salmonella-positivity rates to limit the spread of the disease. The United States Department of Agriculture’s Food Safety and Inspection Service conducted testing from March 28, 2021 to March 26, 2022 in different poultry establishments across the United States Suozzo, Ngu, Grabell, &amp; Yeung, 2021). The state with the highest salmonella rate is Maine with 47.83% and the state with the least is Nevada with 0%. The results of the testing can be seen in the map below colored based on the salmonella rate with an interactive slider that allows you to see the states that have rates above the cutoff.</p>
+
 <vegachart schema-url="/assets/json/cutoff_chart.json" style="width: 100%"></vegachart>
+<p>Sources: 
+<a href="https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data">ProPublica Data Store</a>,
+<a href="https://github.com/jasonong/List-of-US-States/blob/master/states.csv">Jason Ong</a>, 
+<a href="https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json">Mike Bostock</a></p>
 
 <h2 id="serotype-counts">Serotype Counts</h2>
 
+<p>According to the Centers for Disease Control and Prevention (2022), “[s]erotypes are groups within a single species of microorganisms, such as bacteria or viruses, which share distinctive surface structures.” Salmonella bacteria have many different serotypes as seen in the bar chart below. The serotypes can be distinctive to a specific animal or a particular geographic region (CDC, 2022). The CDC (2022) credits “[s]erotyping [as] the core of public health monitoring of Salmonella infections for over 50 years, because of the ability to detect more outbreaks. Therefore, the bar chart below that allows you to filter using the state dropdown showcases the prominent serotypes found in each state as well as across all states. Please note that only 44 states are included in the dropdown because only positive salmonella samples can have a serotype and 6 states do not have a record of a positive salmonella sample.</p>
+
 <vegachart schema-url="/assets/json/bar_chart.json" style="width: 100%"></vegachart>
+<p>Sources: 
+<a href="https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data">ProPublica Data Store</a>,
+<a href="https://github.com/jasonong/List-of-US-States/blob/master/states.csv">Jason Ong</a></p>
 
 <h2 id="dashboard">Dashboard</h2>
 
+<p>The dashboard below is a combination of the “Salmonella Rates by State” and “Serotype Counts Based on State” charts. The primary difference is that the dashboard eliminates the need for a state dropdown because the state(s) selected on the map will adjust the bar chart accordingly. The map begins being entirely steelblue because all of the states are initially selected. However, once the audience clicks on a state of interest, the orange coloring based on salmonella will be revealed. If the shift key is pressed while clicking, it will select multiple states, to allow the counts across states to be represented in the bar graph. Please note that the 6 states without a record of a positive salmonella sample will have no data for the bar graph because only positive salmonella samples can have a serotype.</p>
+
 <vegachart schema-url="/assets/json/dashboard.json" style="width: 100%"></vegachart>
+<p>Sources: 
+<a href="https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data">ProPublica Data Store</a>,
+<a href="https://github.com/jasonong/List-of-US-States/blob/master/states.csv">Jason Ong</a>, 
+<a href="https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json">Mike Bostock</a></p>
 
 <h2 id="infantis">Infantis</h2>
 
-<p><img src="/assets/pngs/chart.png" alt="chart.png" /></p>
+<p>A failure in Food Safety and Inspection Service regulations and safety plans caused the spread of the serotype Infantis resulting in a 32-state outbreak of salmonella in 2019 (The Pew Charitable Trusts, 2021). Therefore, according to the Pew Charitable Trusts (2021), “reducing the prevalence of any variety—even those that pose little or no risk to people—can count as success” in terms of Salmonella control. According to the Chicken Checker (2021) data, Infantis is the leading serotype in the United States with nearly 800 samples found during their testing period. The chart provided by the Pew Charitable Trusts, displays the percent of positive Salmonella samples of the serotype Infantis in different parts of a chicken. For the audience, it can reveal information on which parts of the chicken are most important to test in order to limit the spread of Infantis.</p>
+
+<p><img src="/assets/pngs/chart.png" alt="chart.png" />
+Source: <a href="https://www.pewtrusts.org/en/research-and-analysis/data-visualizations/2021/12-charts-explore-americas-salmonella-problem-and-steps-to-solve-it">The Pew Charitable Trusts</a></p>
+
+<h2 id="sources">Sources</h2>
+<h4 id="data">Data</h4>
+<p>    Bostock, M. (2023, April 18). <em>US Atlas</em>. GitHub. <a href="https://github.com/topojson/us-atlas">https://github.com/topojson/us-atlas</a>
+<br />    <em>Chicken Checker</em>. ProPublica Data Store. (2021, November). <a href="https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data">https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data</a>
+<br />    Ong, J. (2012, July 23). <em>List of US States</em>. GitHub. <a href="https://github.com/jasonong/List-of-US-States/blob/master/states.csv">https://github.com/jasonong/List-of-US-States/blob/master/states.csv</a>
+<br />    <em>Table IDNotif. Selected nationally notifiable disease rates and number of new cases: United States, selected years 1950–2019</em>. Centers for Disease Control and Prevention. (n.d.). <a href="https://www.cdc.gov/nchs/data/hus/2020-2021/idnotif.pdf">https://www.cdc.gov/nchs/data/hus/2020-2021/idnotif.pdf</a></p>
+<h4 id="other-sources">Other Sources</h4>
+<p>    Centers for Disease Control and Prevention. (2022, September 9). <em>Serotypes and the importance of serotyping salmonella</em>. Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/salmonella/reportspubs/salmonella-atlas/serotyping-importance.html">https://www.cdc.gov/salmonella/reportspubs/salmonella-atlas/serotyping-importance.html</a>
+<br />    The Pew Charitable Trusts. (2021, December 10). <em>12 charts explore America’s salmonella problem-and steps to solve it</em>. The Pew Charitable Trusts. <a href="https://www.pewtrusts.org/en/research-and-analysis/data-visualizations/2021/12-charts-explore-americas-salmonella-problem-and-steps-to-solve-it">https://www.pewtrusts.org/en/research-and-analysis/data-visualizations/2021/12-charts-explore-americas-salmonella-problem-and-steps-to-solve-it</a>
+<br />    Suozzo, A., Ngu, A., Grabell, M., &amp; Yeung, B. (2021, October 29). <em>About the data: Chicken checker</em>. ProPublica. <a href="https://projects.propublica.org/chicken/methodology/">https://projects.propublica.org/chicken/methodology/</a></p>
 
 <!-- these are written in a combo of html and liquid -->
 
 <div class="left">
 <a class="m-1 btn btn-outline-primary btn-2 " href="https://www.propublica.org/datastore/dataset/usda-poultry-plant-salmonella-inspection-data">
-  The Data
+  The Primary Data
 </a>
 </div>
 
